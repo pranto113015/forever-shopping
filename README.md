@@ -21,11 +21,10 @@
     ```sh
     npm run dev
     ```
-- step-6 : Install Tailwindcss
+- step-6 : Install Tailwindcss Postcss
     ```sh
     npm install -D tailwindcss postcss autoprefixer
     ```
     ```sh
     npx tailwindcss init -p
     ```
-- step-7 : 
