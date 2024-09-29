@@ -1,15 +1,15 @@
 import React, { useContext, useEffect, useState } from "react";
 import { ShopContext } from "../context/ShopContext";
 import Title from "./Title";
+import ProducItem from "./ProducItem";
+
 
 const BestSeller = () => {
-  const { products } = useContext(ShopContext);
+  const {products} = useContext(ShopContext);
   const [bestSeller, setBestSeller] = useState([]);
 
   useEffect(() => {
-    const bestProduct = products.filter((item) => {
-      item.bestSeller;
-    });
+    const bestProduct = products.filter((item) => (item.bestSeller));
     setBestSeller(bestProduct.slice(0, 5));
   }, []);
 
@@ -22,6 +22,22 @@ const BestSeller = () => {
           odit et nisi amet maiores.
         </p>
       </div>
+
+
+      {/* rendering best products */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 gap-y-6">
+        {
+        bestSeller.map((item, index) => (
+       <ProducItem   key={index}
+       id={item._id}
+       name={item.name}
+       image={item.image}
+       price={item.price}/>
+        ))
+        }
+      </div>
+
+
     </div>
   );
 };
