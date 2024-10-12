@@ -80,8 +80,15 @@ const Collection = () => {
       <div className="flex-1">
         <div className="flex justify-between text-base sm:text-2xl mb-4">
           <Title text1={"All"} text2={"COLLECTIONS"} />
+          {/* Product sort */}
+          <select className="border-2 border-gray-300 text-sm px-2">
+            <option value="relevent">Sort by: Relevent</option>
+            <option value="low-high">Sort by: Low to High</option>
+            <option value="high-low">sort by: High to Low</option>
+          </select>
         </div>
       </div>
+      
     </div>
   );
 };
