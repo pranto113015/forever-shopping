@@ -28,7 +28,7 @@ const SearchBar = () => {
           type="text"
           placeholder="Search"
         />
-        <img className="w-4" src={assets.search_icon} alt="icon" />
+        <img onClick={() => setShowSearch(true)} className="w-4 cursor-pointer" src={assets.search_icon} alt="icon" />
       </div>
       <img
         onClick={() => setShowSearch(false)}
