@@ -19,6 +19,13 @@ a.active hr {
     font-style: normal;
 }
 
+/* hide default scroll bar of product img */
+::-webkit-scrollbar{
+    display: none;
+}
+
+
+
 @media (max-width:648px) {
     a.active {
         background-color: black;
