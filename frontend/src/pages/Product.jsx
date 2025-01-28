@@ -97,17 +97,26 @@ const Product = () => {
         </div>
       </div>
 
-      {/*---------- Description & Review Section ----------*/}
 
+      {/*---------- Description & Review Section ----------*/}
       <div className="mt-20">
         <div className="flex">
           <b className="border px-5 py-3 text-sm">Description</b>
           <p className="border px-5 py-3 text-sm">Reviews (122)</p>
         </div>
 
-
-        
+        <div className="flex flex-col gap-4 border px-6 py-4 text-sm text-gray-500">
+          <p>
+          Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia.
+          </p>
+          <p>
+          Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia.
+          </p>
+        </div>
       </div>
+
+
+
     </div>
   ) : (
     <div className="opacity-0"></div>
