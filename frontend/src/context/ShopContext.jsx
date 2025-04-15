@@ -70,6 +70,14 @@ const getCartCount = () => {
 }
 
 
+const updateQuantity = (itemId, size, quantity) => {
+  let cartData = structuredClone(cartItems);
+      cartData[itemId][size] = quantity;
+           setCartItems(cartData);
+}
+
+
+
 
 
 
@@ -83,7 +91,8 @@ const getCartCount = () => {
     setShowSearch,
     cartItems,
     addToCart,
-    getCartCount
+    getCartCount,
+    updateQuantity,
   };
   
   ShopContextProvider.propTypes = {
