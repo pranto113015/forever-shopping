@@ -2,6 +2,8 @@ import { createContext, useState } from "react";
 import { products } from "../assets/assets";
 import PropTypes from 'prop-types';
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
+
 
 export const ShopContext = createContext();
 
@@ -18,6 +20,7 @@ const ShopContextProvider = (props) => {
   const [cartItems, setCartItems] = useState({});
 
 
+  const navigate = useNavigate();
 
 
 
@@ -110,6 +113,7 @@ return totalAmount ;
     getCartCount,
     updateQuantity,
     getCartAmount,
+    navigate,
   };
   
   ShopContextProvider.propTypes = {
