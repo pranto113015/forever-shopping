@@ -1,10 +1,10 @@
 {
   "name": "backend",
   "version": "1.0.0",
+  "type": "module",
   "description": "- step-1 :\r Close all the frontend file and folder then create backend folder. After create backend folder look like `backend` now select the folder and right click and select the menu option `Open in Integrated Terminal` now the the another terminal for backend.",
   "main": "server.js",
   "scripts": {
-
     "start": "node server.js",
     "server": "nodemon server.js"
   },

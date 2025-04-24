@@ -47,4 +47,8 @@ Close all the frontend file and folder then create backend folder. After create 
 - step-6: Then we will create some folder inside the backend folder.
 
      `config`, `controllers`, `middleware`, `models`, `routes` etc.
-- step-7: 
+- step-7: If we run the server then follow the code 
+
+    ```sh
+    npm run server
+    ```
