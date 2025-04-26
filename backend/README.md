@@ -52,3 +52,4 @@ Close all the frontend file and folder then create backend folder. After create 
     ```sh
     npm run server
     ```
+- step-8: Use the [Cloudinarry](https://cloudinary.com/) API .
