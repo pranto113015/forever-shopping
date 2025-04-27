@@ -1,7 +1,9 @@
 import {v2 as cloudinary} from 'cloudinary';
-import { connect } from 'mongoose';
 
-const cloudinaryConfig = async () => {
+
+
+const connectCloudinary = async () => {
+    
 
     cloudinary.config({
         cloud_name: process.env.CLOUDINARY_NAME,
@@ -10,3 +12,5 @@ const cloudinaryConfig = async () => {
     });
 }
 export default connectCloudinary;
+
+
