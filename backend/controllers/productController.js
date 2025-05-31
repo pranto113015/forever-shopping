@@ -2,6 +2,7 @@ import { v2 as cloudinary } from 'cloudinary';
 import productModel from '../models/productModel.js';
 
 
+
 // function for add product
 const addProduct = async (req, res) => {
     try {
@@ -59,7 +60,6 @@ const addProduct = async (req, res) => {
 
 
 
-
 // function for list product
 const listProducts = async (req, res) => {
     try {
@@ -70,7 +70,6 @@ const listProducts = async (req, res) => {
         res.json({ success: false, message: error.message });
     }
 }
-
 
 
 
@@ -92,11 +91,20 @@ const removeProduct = async (req, res) => {
 
 
 
-
 // function for single product info
 const singleProduct = async (req, res) => {
 
+    try {
+        const { productId } = req.body;
+        const product = await productModel.findById(productId);
+        res.json({ success: true, product });
+        
+    } catch (error) {
+        console.log(error);
+        res.json({ success: false, message: error.message });
+    } 
 }
+
 
 
 export { listProducts, addProduct, removeProduct, singleProduct };
