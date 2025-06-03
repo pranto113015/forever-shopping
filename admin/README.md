@@ -1,12 +1,59 @@
-# React + Vite
+# Forever Shopping E-comerce Full Stack Website Creating Admin Short Step
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Admin Part
+- step-1 : 
+    ```sh
+    npm create vite@latest 
+    ```
+- step-2 : created project name `admin` 
+- step-3 : selected framwork `react`
+- step-4 : seleted variant `JavaScript`
+- step-5 : 
+    ```sh
+    cd frontend
+    ```
+    ```sh
+    npm install
+    ```
+    ```sh
+    npm install axios react-router-dom react-toastify
 
-Currently, two official plugins are available:
+    ```
+    ```sh
+    npm run dev
+    ```
+- step-6 : Install Tailwindcss Using PostCSS (v4.1)
+  - Install Tailwind CSS
+    ```sh
+    npm install tailwindcss @tailwindcss/postcss postcss
+    ```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+  - Add Tailwind to your PostCSS configuration make the file (postcss.config.js) and copy the code .
+    ```sh
+    export default {
+    plugins: {
+        "@tailwindcss/postcss": {},
+      }
+    }
+    ```
+  - Import Tailwind CSS Copy the code and paste the index.css file.
 
-## Expanding the ESLint configuration
+    ```sh
+    @import "tailwindcss";
+    ```
+  - Add Tailwind to your PostCSS another configuration make the file (tailwind.config.js) and copy the code.
+    ```sh
+        /** @type {import('tailwindcss').Config} */
+    export default {
+    content: ["./index.html", "./src/**/*.{js,jsx}"],
+    theme: {
+        extend: {},
+    },
+    plugins: [],
+    }
+    ```
+  - Start your build process
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+    ```sh
+    npm run dev
+    ```
