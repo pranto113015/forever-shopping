@@ -1,8 +1,11 @@
 import React from 'react'
+import Navbar from './components/Navbar'
 
 const App = () => {
   return (
-    <div className='text-3xl font-bold text-black-500'>Check The Tailwind CSS Setup</div>
+    <>
+    <Navbar />
+    </>
   )
 }
 
