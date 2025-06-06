@@ -57,3 +57,8 @@
     ```sh
     npm run dev
     ```
+- step-7 : Add Toastify header file in the `App.jsx` file 
+    ```sh
+    import { ToastContainer } from 'react-toastify';
+    import 'react-toastify/dist/ReactToastify.css';
+    ```
