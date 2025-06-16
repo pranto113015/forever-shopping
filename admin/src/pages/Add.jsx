@@ -3,7 +3,7 @@ import { assets } from "../assets/assets";
 import axios from "axios";
 import { backendUrl } from "../App";
 
-const Add = () => {
+const Add = ({token}) => {
   const [image1, setImage1] = useState(false);
   const [image2, setImage2] = useState(false);
   const [image3, setImage3] = useState(false);
@@ -23,12 +23,12 @@ const Add = () => {
 
     try {
       const formData = new FormData();
-      
+
       formData.append("name", name);
       formData.append("description", description);
       formData.append("price", price);
       formData.append("category", category);
-      formData.append("subcategory", subcategory);
+      formData.append("subCategory", subcategory);
       formData.append("bestseller", bestseller);
       formData.append("sizes", JSON.stringify(sizes));
 
@@ -37,15 +37,18 @@ const Add = () => {
       image3 && formData.append("image3", image3);
       image4 && formData.appends("image4", image4);
 
-      const respoonse = await axios.post(
-        backendUrl + "/api/product/add",
-        formData
-      );
-      console.log(respoonse.data);
+
+      const response = await axios.post(
+
+      backendUrl + "/api/product/add",formData,{ headers: { token } }  );
+      
+      console.log(response.data);
+    
     } catch (error) {
       console.error("Error uploading product:", error);
     }
   };
+
 
   return (
     <form className="flex flex-col w-full items-start gap-3" onSubmit={onSubmitHandler}>
@@ -279,7 +282,7 @@ const Add = () => {
         </label>
       </div>
 
-      <button className="w-28 py-3 mt-4 bg-black text-white" type="submit">
+      <button className="w-28 py-3 mt-4 bg-black text-white cursor-pointer" type="submit">
         ADD
       </button>
     </form>
