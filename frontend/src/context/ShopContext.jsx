@@ -23,6 +23,8 @@ const ShopContextProvider = (props) => {
   const [cartItems, setCartItems] = useState({});
 
   const [products, setProducts] = useState([]);
+  const [token, setToken] = useState("");
+
 
   const navigate = useNavigate();
 
@@ -98,7 +100,7 @@ const ShopContextProvider = (props) => {
      
 
       const response = await axios.get(apiUrl);
-      console.log(response.data);
+   
 
       if (response.data.success) {
         setProducts(response.data.products);
@@ -106,7 +108,7 @@ const ShopContextProvider = (props) => {
         toast.error("No products found");
       }
     } catch (error) {
-      console.error("❌ Error fetching products:", error);
+      console.error("Error fetching products:", error);
       toast.error("Failed to load products.");
     }
   };
@@ -133,6 +135,8 @@ const ShopContextProvider = (props) => {
     getCartAmount,
     navigate,
     backendUrl,
+    setToken,
+    token,
   };
 
   ShopContextProvider.propTypes = {
