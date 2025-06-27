@@ -28,3 +28,12 @@
     ```sh
     npx tailwindcss init -p
     ```
+- step-7 : Install axios
+    ```sh
+     npm i axios
+    ```
+ 
+
+
+
+   

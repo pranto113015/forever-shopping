@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ShopContext } from "./../context/ShopContext";
 import { assets } from "../assets/assets";
 import Title from "./../components/Title";
@@ -73,7 +73,7 @@ const Collection = () => {
 
   useEffect(() => {
     applyFilter();
-  }, [category, subCategory,search,showSearch]);
+  }, [category,subCategory,search,showSearch,products]);
 
   // this code is for price wise product sorting
   useEffect(() => {
