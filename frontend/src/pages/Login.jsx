@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { ShopContext } from '../context/ShopContext';
 import axios from 'axios';
 import { toast } from 'react-toastify';
@@ -55,6 +55,18 @@ const Login = () => {
       toast.error(error.message);
     }
   }
+
+
+
+  // Redirect to home page if token is set
+  // This will happen when user is logged in
+useEffect(() =>{
+if(token){
+  navigate('/')
+}
+},[token])
+
+
 
   return (
     <div>
