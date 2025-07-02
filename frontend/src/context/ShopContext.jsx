@@ -79,12 +79,34 @@ const ShopContextProvider = (props) => {
     return totalCount;
   };
 
-  const updateQuantity = (itemId, size, quantity) => {
+  const updateQuantity = async (itemId, size, quantity) => {
     let cartData = structuredClone(cartItems);
     cartData[itemId][size] = quantity;
     setCartItems(cartData);
+
+    if(token){
+      try {
+        await axios.post(backendUrl + 'api/cart/update', {itemId, size, quantity},{headers: {token}})
+      } catch (error){
+        console.error(error);
+        toast.error("Failed to update item quantity.");
+      }
+    }
+
+
   };
 
+
+
+
+
+
+
+
+
+
+
+  // get total amount of the cart
   const getCartAmount = () => {
     let totalAmount = 0;
     for (const items in cartItems) {
