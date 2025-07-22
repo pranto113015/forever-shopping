@@ -34,7 +34,7 @@ const {currency, delivery_fee, getCartAmount} = useContext(ShopContext);
 
             <div className='flex justify-between'>
                 <b>Total:</b>
-                <b>{currency}{getCartAmount() === 0 ? 0 : getCartAmount() + delivery_fee }.00</b>
+                <b>{currency}{getCartAmount() === 0 ? 0 : getCartAmount() + delivery_fee } .00</b>
             </div>
 
         </div>

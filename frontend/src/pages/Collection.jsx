@@ -73,7 +73,7 @@ const Collection = () => {
 
   useEffect(() => {
     applyFilter();
-  }, [category,subCategory,search,showSearch,products]);
+  }, [category, subCategory, search, showSearch, products]);
 
   // this code is for price wise product sorting
   useEffect(() => {
