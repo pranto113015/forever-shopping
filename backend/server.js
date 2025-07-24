@@ -33,7 +33,7 @@ app.use('/api/order', orderRouter);
 
 
 app.get('/', (req, res) => {
-    res.send('API Is Working');
+    res.send('API Is Working Properly');
 });
 
 

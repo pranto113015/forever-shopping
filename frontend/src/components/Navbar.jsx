@@ -20,7 +20,7 @@ function Navbar() {
     navigate("/login");
     localStorage.removeItem("token");
     setToken("");
-    toast.success("Logout successful");
+    // toast.success("Logout successful");
     setCartItems({});
     
     

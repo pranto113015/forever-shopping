@@ -42,4 +42,4 @@ const {currency, delivery_fee, getCartAmount} = useContext(ShopContext);
   )
 }
 
-export default CartTotal
+export default CartTotal;
