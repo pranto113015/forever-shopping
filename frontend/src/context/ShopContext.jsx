@@ -203,6 +203,7 @@ const getCartAmount = () => {
     token,
   };
 
+  
   ShopContextProvider.propTypes = {
     children: PropTypes.node.isRequired, // Validates that 'children' is a React node and required
   };
