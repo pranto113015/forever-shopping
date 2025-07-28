@@ -2,6 +2,7 @@
 import orderModel from '../models/orderModel.js';
 import userModel from '../models/userModel.js';
 import Stripe from 'stripe';
+import Razorpay from 'razorpay';
 
 
 
@@ -12,6 +13,12 @@ const deliveryCharges = 10;
 
 // gateway initialization
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+
+
+const razorpayInstance = new Razorpay({
+    key_id: process.env.RAZORPAY_KEY_ID,
+    key_secret: process.env.RAZORPAY_KEY_SECRET,
+});
 
 
 
@@ -103,7 +110,7 @@ const placeOrderStripe = async (req, res) => {
                     name: item.name
                
                 },
-                unit_amount: item.price * 100, // Convert to cents
+                unit_amount: item.price * 100, 
             },
             quantity: item.quantity
         }))
@@ -114,7 +121,7 @@ const placeOrderStripe = async (req, res) => {
                     name: 'Delivery Charges'
                
                 },
-                unit_amount: deliveryCharges * 100, // Convert to cents
+                unit_amount: deliveryCharges * 100, 
             },
             quantity: 1
         })
@@ -171,8 +178,75 @@ const verifyStripe = async (req, res) => {
 
 // placing orders using Razorpay Method
 const placeOrderRazorpay = async (req, res) => {
+    
+    try {
+         const { userId, items, amount, address } = req.body;
+    
 
+     const orderData = {
+            userId,
+            items,
+            address,
+            amount,
+            paymentMethod: "Razorpay",
+            payment: false,
+            date: formatDateTime(Date.now()) 
+        };
+        const newOrder = new orderModel(orderData)
+        await newOrder.save();
+
+        const options ={
+            amount: amount * 100,
+            currency: currency.toUpperCase(),
+            receipt: newOrder._id.toString(),
+        }
+
+        await razorpayInstance.orders.create(options, (error,order)=>{
+            if(error){
+                console.log(error);
+                return res.json({success:false, message:error});
+            }
+            res.json({success:true, order})
+        })
+
+    } catch (error) {
+        console.log(error);
+        res.json({ success: false, message: error.message });
+
+    }
 }
+
+
+
+
+// verify Razorpay payment
+const verifyRazorpay = async (req, res) => {
+
+    try {
+        const {userId, razorpay_order_id} = req.body;
+        const orderInfo = await razorpayInstance.orders.fetch(razorpay_order_id)
+
+      if(orderInfo.status === 'paid'){
+            await orderModel.findByIdAndUpdate(orderInfo.receipt, { payment: true });
+            await userModel.findByIdAndUpdate(userId, { cartData: {} });
+            res.json({success: true, message: "Payment Successfully"});
+        } else {
+            res.json({success: false, message: "Payment Failed"});
+
+        }
+
+
+    } catch (error){
+        console.log(error);
+        res.json({ success: false, message: error.message });
+    }
+}
+
+
+
+
+
+
 
 
 // all orders data for admin panel
@@ -225,6 +299,6 @@ try {
 }
 
 
-export {verifyStripe, placeOrder, placeOrderStripe, placeOrderRazorpay, allOrders, userOrders, updateStatus, formatDateTime };
+export {verifyStripe,verifyRazorpay, placeOrder, placeOrderStripe, placeOrderRazorpay, allOrders, userOrders, updateStatus, formatDateTime };
 
 
