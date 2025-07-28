@@ -49,10 +49,10 @@ This is a complete **Full Stack E-commerce Web Application** built using the MER
 
 ## 🔐 Credentials for authentication (for testing)
 
-| Role       | Email                 | Password |
-| ---------- | --------------------- | -------- |
-| Admin      | admin@example.com     | admin123 |
-| User       | user@gmail.com        | user123  |
+| Role       | Email                 | Password  |
+| ---------- | --------------------- | ----------|
+| Admin      | admin@example.com     | admin123  |
+| User       | user@gmail.com        | user@123  |
 
 
 
