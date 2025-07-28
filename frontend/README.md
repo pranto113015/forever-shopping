@@ -36,4 +36,21 @@
 
 
 
-   
+ 
+
+### For Deployment in Vercel the follow some step
+- create `vercel.json` file insite the `frontend` root folder and paste the bellow code.
+## vercel.json
+
+Vercel json config to support React Router in frontend
+
+```bash
+  {
+    "rewrites": [
+      {
+        "source": "/(.*)",
+        "destination": "/"
+      }
+    ]
+  }
+```

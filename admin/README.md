@@ -62,3 +62,25 @@
     import { ToastContainer } from 'react-toastify';
     import 'react-toastify/dist/ReactToastify.css';
     ```
+
+
+
+
+     
+
+### For Deployment in Vercel the follow some step
+- create `vercel.json` file insite the `admin` root folder and paste the bellow code.
+## vercel.json
+
+Vercel json config to support React Router in frontend
+
+```bash
+  {
+    "rewrites": [
+      {
+        "source": "/(.*)",
+        "destination": "/"
+      }
+    ]
+  }
+```

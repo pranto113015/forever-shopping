@@ -53,3 +53,35 @@ Close all the frontend file and folder then create backend folder. After create 
     npm run server
     ```
 - step-8: Use the [Cloudinarry](https://cloudinary.com/) API .
+
+
+
+
+### For Deployment in Vercel the follow some step
+- create `vercel.json` file insite the `backend` root folder and paste the bellow code.
+## vercel.json
+
+Vercel json config for express backend
+
+```bash
+  {
+    "version": 2,
+    "builds": [
+        {
+            "src": "server.js",
+            "use": "@vercel/node",
+            "config": {
+                "includeFiles": [
+                    "dist/**"
+                ]
+            }
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "server.js"
+        }
+    ]
+}
+```
