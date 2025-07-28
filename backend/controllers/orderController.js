@@ -225,6 +225,6 @@ try {
 }
 
 
-export { placeOrder, placeOrderStripe, placeOrderRazorpay, allOrders, userOrders, updateStatus, formatDateTime };
+export {verifyStripe, placeOrder, placeOrderStripe, placeOrderRazorpay, allOrders, userOrders, updateStatus, formatDateTime };
 
 
