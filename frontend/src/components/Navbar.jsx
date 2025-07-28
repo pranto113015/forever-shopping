@@ -2,7 +2,7 @@ import { assets } from "./../assets/assets";
 import { Link, NavLink } from "react-router-dom";
 import { useContext, useState } from "react";
 import { ShopContext } from "../context/ShopContext";
-import { toast } from "react-toastify";
+
 
 function Navbar() {
   const [visible, setVisible] = useState(false);
@@ -51,6 +51,13 @@ function Navbar() {
           <p>CONTACT</p>
           <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
         </NavLink>
+
+
+        <NavLink to="https://forever-admin-omega-liard.vercel.app/" className="flex flex-col items-center gap-1 ">
+          <p className="border px-5 text-sm py-1 rounded-full -mt-1">Admin Panel</p>
+          <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
+        </NavLink>
+
       </ul>
 
       <div className="flex items-center gap-6">
@@ -150,6 +157,13 @@ function Navbar() {
             to="/contact"
           >
             Contact
+          </NavLink>
+            <NavLink
+            onClick={() => setVisible(false)}
+            className="py-2 pl-6 border"
+            to="https://forever-admin-omega-liard.vercel.app/"
+          >
+            Admin Panel
           </NavLink>
         </div>
       </div>
