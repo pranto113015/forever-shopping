@@ -42,7 +42,7 @@ Close all the frontend file and folder then create backend folder. After create 
 
   - `cloudinary` - SDK for Cloudinary (image/video upload and management).
 
-  - `bcrypt` - Library for hashing passwords securely.
+  - `bcryptjs` - Library for hashing passwords securely.
 
 - step-6: Then we will create some folder inside the backend folder.
 
