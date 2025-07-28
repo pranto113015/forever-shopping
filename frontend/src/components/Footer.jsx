@@ -1,4 +1,3 @@
-import React from "react";
 import { assets } from "../assets/assets";
 
 const Footer = () => {
@@ -34,7 +33,7 @@ const Footer = () => {
 
       <div>
         <hr />
-        <p className="py-5 text-sm text-center">Copyright 2024 @ forever.com - All Right Reserved Design by Pranto Kumar</p>
+        <p className="py-5 text-sm text-center">Copyright 2024-2025 @ forever.com - All Right Reserved Design by <a href="https://www.linkedin.com/in/pranto-kumar-113015/">Pranto Kumar</a></p>
       </div>
     </div>
   );
