@@ -47,12 +47,24 @@ This is a complete **Full Stack E-commerce Web Application** built using the MER
 ---
 
 
-## 🔐 Credentials (for testing)
+## 🔐 Credentials for authentication (for testing)
 
 | Role       | Email                 | Password |
 | ---------- | --------------------- | -------- |
-| Admin      | admin@gmail.com             | ---   |
-| User | user@gmail.com | ---   |
+| Admin      | admin@example.com     | admin123 |
+| User       | user@gmail.com        | user123  |
+
+
+
+---
+
+
+## 🔑 Credentials for payment (for testing)
+
+| Role         | Email                 | Card No             | Date  | CVC |
+| -------------| --------------------- | --------------------|-------|-----|
+| Stripe       | demo@gmail.com        | 4242 4242 4242 4242 | 12/34 | 567 |
+| Razorpay     | demo@gmail.com        | 4386 2894 0766 0153 | 15/35 | 234 |
 
 
 
