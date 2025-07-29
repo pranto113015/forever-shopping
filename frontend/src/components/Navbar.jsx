@@ -53,8 +53,8 @@ function Navbar() {
         </NavLink>
 
 
-        <NavLink to="https://forever-admin-omega-liard.vercel.app/" className="flex flex-col items-center gap-1 ">
-          <p className="border px-5 text-sm py-1 rounded-full -mt-1">Admin Panel</p>
+        <NavLink target="_blank" to="https://forever-admin-omega-liard.vercel.app/" className="flex flex-col items-center gap-1 ">
+          <a  className="border px-5 text-sm py-1 rounded-full -mt-1">Admin Panel</a>
           <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
         </NavLink>
 
