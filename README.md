@@ -211,7 +211,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Developed as part of the **own learning**.
 - Inspired by MERN project like Full Stack E-comerce site.
 
+## ☎︎ Contact
+If you have any questions or need further clarification, please contact my email/ Linkedin .
 
+- **💌 Email : pranto113015@gmail.com**
+
+- **🕵️‍♂️ Linkedin : [Pranto Kumar](https://www.linkedin.com/in/pranto-kumar-a326801b3/)**
 
 **⭐ If you found this project helpful, please give it a star!**
 
