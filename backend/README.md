@@ -1,6 +1,6 @@
-# Forever Shopping E-comerce Full Stack Website Creating Backend Short Step
+### Forever Shopping – Full Stack E-commerce Website: Short Guide to Creating the Backend Folder
 
-### Backend Part
+#### Backend Part
 
 - step-1 :
 Close all the frontend file and folder then create backend folder. After create backend folder look like `backend` now select the folder and right click and select the menu option `Open in Integrated Terminal` now the the another terminal for backend.
@@ -58,10 +58,7 @@ Close all the frontend file and folder then create backend folder. After create 
 
 
 ### For Deployment in Vercel the follow some step
-- create `vercel.json` file insite the `backend` root folder and paste the bellow code.
-## vercel.json
-
-Vercel json config for express backend
+create `vercel.json` file insite the `backend` root folder and paste the bellow code. Vercel json config for express backend
 
 ```bash
   {

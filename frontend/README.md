@@ -1,6 +1,6 @@
-# Forever Shopping E-comerce Full Stack Website Creating Frontend Short Step
+# Forever Shopping – Full Stack E-commerce Website: Short Guide to Creating the Frontend Folder
 
-### Frontend Part
+#### Frontend Part
 - step-1 : 
     ```sh
     npm create vite@latest
@@ -39,9 +39,7 @@
  
 
 ### For Deployment in Vercel the follow some step
-- create `vercel.json` file insite the `frontend` root folder and paste the bellow code.
-## vercel.json
-
+create `vercel.json` file insite the `frontend` root folder and paste the bellow code.
 Vercel json config to support React Router in frontend
 
 ```bash
