@@ -41,6 +41,54 @@ This is a complete **Full Stack E-commerce Web Application** built using the MER
 - **State Management:** Context API (or Redux, optional)  
 - **Deployment Ready:** Environment variables (`.env`), modular folder structure
 
+# ⚙️ Local Installation & Setup Guide (Windows)
+
+A step-by-step guide to install and run the Forever-Shopping MERN stack project locally on your Windows PC.
+
+
+### ✅ Prerequisites
+
+Before starting, make sure the following tools are installed:
+
+| Tool        | Purpose               | Download Link                         |
+|-------------|------------------------|----------------------------------------|
+| Node.js     | Backend & frontend runtime | [https://nodejs.org/](https://nodejs.org/) |
+| Git         | Clone GitHub repo     | [https://git-scm.com/](https://git-scm.com/) |
+| MongoDB Atlas| Cloud database       | [https://www.mongodb.com/cloud/atlas/register](https://www.mongodb.com/cloud/atlas/register) |
+| Code Editor | VS Code recommended   | [https://code.visualstudio.com/](https://code.visualstudio.com/) |
+
+### 📥 Step 1: Clone the Project
+
+```bash
+git clone https://github.com/pranto113015/forever-shopping.git
+cd forever-shopping
+```
+
+### 📦 Step 2: Setup Backend
+
+```bash
+cd backend
+npm install
+```
+Create a .env file in the /backend directory:
+
+```bash
+PORT=5000
+MONGO_URI=your_mongodb_atlas_connection_string
+JWT_SECRET=your_jwt_secret_key
+STRIPE_SECRET=your_stripe_secret_key
+CLIENT_URL=http://localhost:3000
+```
+
+Run the backend server:
+
+```bash
+npm run dev
+```
+Now Backend will run on like http://localhost:5000
+
+
+
 
 
 
@@ -69,7 +117,7 @@ This is a complete **Full Stack E-commerce Web Application** built using the MER
 
 [Click here](https://forever-frontend-gamma-eight.vercel.app/)
 
----
+
 
 ## 📄 License
 
