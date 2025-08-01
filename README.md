@@ -70,9 +70,9 @@ This is a complete **Full Stack E-commerce Web Application** built using the MER
 
 ---
 
-## 🔗 Live Link
+## 🔗 Live link
 
-[Comming soon](#)
+[Click here](https://forever-frontend-gamma-eight.vercel.app/)
 
 ---
 
