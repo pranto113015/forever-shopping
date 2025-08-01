@@ -41,7 +41,7 @@ This is a complete **Full Stack E-commerce Web Application** built using the MER
 - **State Management:** Context API (or Redux, optional)  
 - **Deployment Ready:** Environment variables (`.env`), modular folder structure
 
-# ⚙️ Local Installation & Setup Guide (Windows)
+## ⚙️ Local Installation & Setup Guide (Windows)
 
 A step-by-step guide to install and run the Forever-Shopping MERN stack project locally on your Windows PC.
 
