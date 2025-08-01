@@ -1,11 +1,9 @@
-### 👷 This project  is now  still  under construction
-
 # Full Stack E-comerce Website Using MERN 
 
 
 This is a complete **Full Stack E-commerce Web Application** built using the MERN stack (MongoDB, Express.js, React, Node.js) with secure Stripe payment integration. It includes all the core features of a modern e-commerce platform such as product listing, shopping cart, user authentication, order management, and payment processing. Whether you're learning MERN or building a real-world e-commerce solution, this project provides a solid foundation for scalable and production-ready applications.
 
----
+
 
 ## 🎯 Project Objectives
 
@@ -19,23 +17,22 @@ This is a complete **Full Stack E-commerce Web Application** built using the MER
 - **📦 Enable order tracking, history, and user account management** for a full-fledged e-commerce experience.
 - **📁 Maintain clean, modular, and reusable code structure** to facilitate scalability and collaboration.
 
----
 
 
 ## 🚀 Core Features
 
-- ✅ **User Registration & Login** (JWT Authentication)
-- ✅ **Admin Panel** for Product & Order Management
-- ✅ **Add to Cart** and Full Checkout Flow
-- ✅ **Cash on Delivery (COD)** & **Stripe Payment** Integration
-- ✅ **Responsive UI** (Mobile-friendly Design)
-- ✅ **Protected Routes** for Users and Admins
-- ✅ **Order History** and Detailed Order View
-- ✅ **Clean and Scalable Folder Structure**
+-  **User Registration & Login** (JWT Authentication)
+-  **Admin Panel** for Product & Order Management
+-  **Add to Cart** and Full Checkout Flow
+-  **Cash on Delivery (COD)** & **Stripe Payment** Integration
+-  **Responsive UI** (Mobile-friendly Design)
+-  **Protected Routes** for Users and Admins
+-  **Order History** and Detailed Order View
+-  **Clean and Scalable Folder Structure**
 
----
 
-## 🧰 Tech Stack
+
+## 🖥️  Tech Stack
 
 - **Frontend:** React JS, React Router, Axios, Bootstrap/Tailwind CSS  
 - **Backend:** Node.js, Express.js, MongoDB (with Mongoose)  
@@ -44,7 +41,7 @@ This is a complete **Full Stack E-commerce Web Application** built using the MER
 - **State Management:** Context API (or Redux, optional)  
 - **Deployment Ready:** Environment variables (`.env`), modular folder structure
 
----
+
 
 
 ## 🔐 Credentials for authentication (for testing)
@@ -56,7 +53,7 @@ This is a complete **Full Stack E-commerce Web Application** built using the MER
 
 
 
----
+
 
 
 ## 🔑 Credentials for payment (for testing)
@@ -68,15 +65,23 @@ This is a complete **Full Stack E-commerce Web Application** built using the MER
 
 
 
----
-
 ## 🔗 Live link
 
 [Click here](https://forever-frontend-gamma-eight.vercel.app/)
 
 ---
 
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 ## 🙌 Acknowledgements
 
 - Developed as part of the **own learning**.
 - Inspired by MERN project like Full Stack E-comerce site.
+
+
+
+**⭐ If you found this project helpful, please give it a star!**
+
+This project demonstrates professional full-stack development with modern technologies, proper database integration and production-ready architecture. Perfect for showcasing your skills to potential employers!
