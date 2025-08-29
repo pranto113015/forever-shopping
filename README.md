@@ -1,9 +1,6 @@
-# 🚀 Full Stack E-comerce Website Using MERN 
-
+# 🚀 Full Stack E-comerce Website Using MERN
 
 This is a complete **Full Stack E-commerce Web Application** built using the MERN stack (MongoDB, Express.js, React, Node.js) with secure Stripe payment integration. It includes all the core features of a modern e-commerce platform such as product listing, shopping cart, user authentication, order management, and payment processing. Whether you're learning MERN or building a real-world e-commerce solution, this project provides a solid foundation for scalable and production-ready applications.
-
-
 
 ## 🎯 Project Objectives
 
@@ -17,64 +14,54 @@ This is a complete **Full Stack E-commerce Web Application** built using the MER
 - **📦 Enable order tracking, history, and user account management** for a full-fledged e-commerce experience.
 - **📁 Maintain clean, modular, and reusable code structure** to facilitate scalability and collaboration.
 
-
-
 ## 🚀 Core Features
 
--  **User Registration & Login** (JWT Authentication)
--  **Admin Panel** for Product & Order Management
--  **Add to Cart** and Full Checkout Flow
--  **Cash on Delivery (COD)** & **Stripe Payment** Integration
--  **Responsive UI** (Mobile-friendly Design)
--  **Protected Routes** for Users and Admins
--  **Order History** and Detailed Order View
--  **Clean and Scalable Folder Structure**
+- **User Registration & Login** (JWT Authentication)
+- **Admin Panel** for Product & Order Management
+- **Add to Cart** and Full Checkout Flow
+- **Cash on Delivery (COD)** & **Stripe Payment** Integration
+- **Responsive UI** (Mobile-friendly Design)
+- **Protected Routes** for Users and Admins
+- **Order History** and Detailed Order View
+- **Clean and Scalable Folder Structure**
 
+## 🖥️ Tech Stack
 
-
-## 🖥️  Tech Stack
-
-- **Frontend:** React JS, React Router, Axios, Bootstrap/Tailwind CSS  
-- **Backend:** Node.js, Express.js, MongoDB (with Mongoose)  
-- **Authentication:** JSON Web Tokens (JWT)  
-- **Payment Integration:** Stripe API  
-- **State Management:** Context API (or Redux, optional)  
+- **Frontend:** React JS, React Router, Axios, Bootstrap/Tailwind CSS
+- **Backend:** Node.js, Express.js, MongoDB (with Mongoose)
+- **Authentication:** JSON Web Tokens (JWT)
+- **Payment Integration:** Stripe API
+- **State Management:** Context API (or Redux, optional)
 - **Deployment Ready:** Environment variables (`.env`), modular folder structure
-
 
 ## 🔐 Credentials for authentication (for testing)
 
-| Role       | Email                 | Password  |
-| ---------- | --------------------- | ----------|
-| Admin      | admin@example.com     | admin123  |
-| User       | user@gmail.com        | user@123  |
-
-
+| Role  | Email             | Password |
+| ----- | ----------------- | -------- |
+| Admin | admin@example.com | admin123 |
+| User  | user@gmail.com    | user@123 |
 
 ## 🔑 Credentials for payment (for testing)
 
-| Role         | Email                 | Card No             | Date  | CVC | Phone     |
-| -------------| --------------------- | --------------------|-------|-----|-----------|
-| Stripe       | demo@gmail.com        | 4242 4242 4242 4242 | 12/34 | 567 |           |
-| Razorpay     | demo@gmail.com        | 4386 2894 0766 0153 | 15/35 | 234 |9876543210 |
-
-
+| Role     | Email          | Card No             | Date  | CVC | Phone      |
+| -------- | -------------- | ------------------- | ----- | --- | ---------- |
+| Stripe   | demo@gmail.com | 4242 4242 4242 4242 | 12/34 | 567 |            |
+| Razorpay | demo@gmail.com | 4386 2894 0766 0153 | 15/35 | 234 | 9876543210 |
 
 ## ⚙️ Local Installation & Setup Guide (Windows)
 
 A step-by-step guide to install and run the Forever-Shopping MERN stack project locally on your Windows PC.
 
-
 ### ✅ Prerequisites
 
 Before starting, make sure the following tools are installed:
 
-| Tool        | Purpose               | Download Link                         |
-|-------------|------------------------|----------------------------------------|
-| Node.js     | Backend & frontend runtime | [https://nodejs.org/](https://nodejs.org/) |
-| Git         | Clone GitHub repo     | [https://git-scm.com/](https://git-scm.com/) |
-| MongoDB Atlas| Cloud database       | [https://www.mongodb.com/cloud/atlas/register](https://www.mongodb.com/cloud/atlas/register) |
-| Code Editor | VS Code recommended   | [https://code.visualstudio.com/](https://code.visualstudio.com/) |
+| Tool          | Purpose                    | Download Link                                                                                |
+| ------------- | -------------------------- | -------------------------------------------------------------------------------------------- |
+| Node.js       | Backend & frontend runtime | [https://nodejs.org/](https://nodejs.org/)                                                   |
+| Git           | Clone GitHub repo          | [https://git-scm.com/](https://git-scm.com/)                                                 |
+| MongoDB Atlas | Cloud database             | [https://www.mongodb.com/cloud/atlas/register](https://www.mongodb.com/cloud/atlas/register) |
+| Code Editor   | VS Code recommended        | [https://code.visualstudio.com/](https://code.visualstudio.com/)                             |
 
 ### 📥 Step 1: Clone the Project
 
@@ -89,6 +76,7 @@ cd forever-shopping
 cd backend
 npm install
 ```
+
 Create a .env file in the /backend directory:
 
 ```bash
@@ -104,28 +92,30 @@ RAZORPAY_KEY_SECRET = your_rasorpay_key_secret
 RAZORPAY_KEY_ID = your_rasorpay_key_id
 PORT=5000
 ```
+
 Run the backend server:
 
 ```bash
 npm run dev
 ```
+
 Now Backend will run on like http://localhost:5000
 
-
 ### 💻 Step 3: Setup Frontend
+
 ```bash
 cd frontend
 npm install
 ```
+
 Create a .env file in the /frontend directory:
 
 ```bash
-VITE_BACKEND_URL= your_backend_url_port 
+VITE_BACKEND_URL= your_backend_url_port
 VITE_RAZORPAY_KEY_ID = your_razorpay_key_id
 ```
+
 Now Frontend will run on like http://localhost:3000
-
-
 
 ### ☁️ Step 4: MongoDB Atlas Setup (Free Cloud DB)
 
@@ -135,36 +125,38 @@ Now Frontend will run on like http://localhost:3000
 4. Whitelist IP Address → Allow Access from Anywhere (0.0.0.0/0)
 5. Click Connect → Connect your application
 6. Copy your Mongo URI Like :
-    ```bash
-    mongodb+srv://e-commerce:e-commerce12345@cluster0.abcd.mongodb.net/forever-shopping?retryWrites=true&w=majority
-    ```
+   ```bash
+   mongodb+srv://demo:kjkfldjskdljfkls@er4ere.dfdf.hdfkjhsdfhd/jlkjfdklsjdklf?retryWrites=true&w=majority
+   ```
 7. Paste it into your .env file as MONGO_URI
 
-
 ### 🔐 Step 5: Admin Setup
+
 Option 1: Use Predefined Admin Credentials
-| Role  | Email                                         | Password |
+| Role | Email | Password |
 | ----- | --------------------------------------------- | -------- |
 | Admin | [admin@example.com](mailto:admin@example.com) | admin123 |
 
-Option 2: Promote Your Own Account 
+Option 2: Promote Your Own Account
+
 1. Register a new user on the frontend
 
 2. Go to MongoDB Atlas → Cluster → Collections → users
 
 3. Find your user and update the role like:
-    ```json
-    {
-    "role": "admin"
-    }
-    ```
+
+   ```json
+   {
+     "role": "admin"
+   }
+   ```
 
 4. Save and re-login — you now have admin access
 
 **🎯 Done! Your full-stack e-commerce site is now running locally 🚀**
 
-
 ## 🧱 Project Structure
+
 ```bash
 forever-shopping/
 │
@@ -190,17 +182,9 @@ forever-shopping/
 └── README.md                 # Project guide
 ```
 
-
-
-
-
-
-
 ## 🔗 Live link
 
 [Click here](https://forever-frontend-gamma-eight.vercel.app/)
-
-
 
 ## 📄 License
 
@@ -212,6 +196,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Inspired by MERN project like Full Stack E-comerce site.
 
 ## ☎︎ Contact
+
 If you have any questions or need further clarification, please contact my email/ Linkedin .
 
 - **💌 Email : pranto113015@gmail.com**
