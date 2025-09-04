@@ -9,7 +9,7 @@ This is a complete **Full Stack E-commerce Web Application** built using the MER
 - **🛡️ Implement user authentication and authorization** using JSON Web Tokens (JWT) for secure login and route protection.
 - **🛒 Design a dynamic cart and checkout system** that supports both Cash on Delivery (COD) and Stripe payment processing.
 - **🗃️ Manage product and order data** efficiently using MongoDB and Mongoose for database operations.
-- **🧑‍💼 Include an Admin Dashboard** for managing products, users, and orders with real-time updates.
+- **💼 Include an Admin Dashboard** for managing products, users, and orders with real-time updates.
 - **💳 Integrate Stripe API** to securely handle online payments and transaction management.
 - **📦 Enable order tracking, history, and user account management** for a full-fledged e-commerce experience.
 - **📁 Maintain clean, modular, and reusable code structure** to facilitate scalability and collaboration.
