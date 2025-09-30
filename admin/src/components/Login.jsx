@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { backendUrl } from "../App";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { assets } from "../assets/assets";
 
 const Login = ({ setToken }) => {
   const [email, setEmail] = useState("");
@@ -31,7 +32,7 @@ const Login = ({ setToken }) => {
       <div className="bg-white shadow-md rounded-lg px-8 py-6 max-w-md">
         {/* Logo/Image */}
         <img
-          src="../src/assets/logo_login.png"
+          src={assets.logo_login}
           alt="Admin Logo"
           className="mx-auto mb-1 w-50 h-15 object-contain"
         />
