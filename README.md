@@ -41,7 +41,7 @@ This is a complete **Full Stack E-commerce Web Application** built using the MER
 | Admin | admin@example.com | admin123 |
 | User  | user@gmail.com    | user@123 |
 
-> ⚠️ **Note:** Admin panel access is disabled for security reasons.  
+> ⚠️ 🔑 **Note:** Admin panel access is disabled for security reasons.  
 >  To request access, please contact me via [LinkedIn](https://www.linkedin.com/in/pranto-kumar-a326801b3/)
 
 ## 🔑 Credentials for payment (for testing)
