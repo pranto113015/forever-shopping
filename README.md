@@ -1,4 +1,4 @@
-# 🚀 Full Stack E-comerce Website Using MERN
+# 🎯 Full Stack E-comerce Website Using MERN
 
 This is a complete **Full Stack E-commerce Web Application** built using the MERN stack (MongoDB, Express.js, React, Node.js) with secure Stripe payment integration. It includes all the core features of a modern e-commerce platform such as product listing, shopping cart, user authentication, order management, and payment processing. Whether you're learning MERN or building a real-world e-commerce solution, this project provides a solid foundation for scalable and production-ready applications.
 
@@ -40,6 +40,9 @@ This is a complete **Full Stack E-commerce Web Application** built using the MER
 | ----- | ----------------- | -------- |
 | Admin | admin@example.com | admin123 |
 | User  | user@gmail.com    | user@123 |
+
+> ⚠️ 🔑 **Note:** Admin panel access is disabled for security reasons.  
+>  To request access, please contact me via [LinkedIn](https://www.linkedin.com/in/pranto-kumar-a326801b3/)
 
 ## 🔑 Credentials for payment (for testing)
 
