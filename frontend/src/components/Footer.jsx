@@ -45,7 +45,7 @@ const Footer = () => {
           <span className="ml-1">
             Designed & Developed by{" "}
             <a
-              href="https://www.linkedin.com/in/pranto-kumar-113015/"
+              href="https://www.linkedin.com/in/pranto-kumar-a326801b3/"
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium hover:underline"
