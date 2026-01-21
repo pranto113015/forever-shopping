@@ -1,4 +1,5 @@
 import { assets } from "../assets/assets";
+import { FiPhone, FiMail } from "react-icons/fi";
 
 const Footer = () => {
   return (
@@ -24,16 +25,35 @@ const Footer = () => {
 
         <div>
           <p className="text-xl font-medium mb-5">GET IN TOUCH</p>
-          <ul className="flex flex-col gap-1 text-gray-600">
-            <li>+880 1992113015</li>
-            <li>pranto113015@gmail.com</li>
+          <ul className="flex flex-col gap-2 text-gray-600">
+            <li className="flex items-center gap-2">
+              <FiPhone className="text-gray-500" />
+              <span>+880 1992113015</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <FiMail className="text-gray-500" />
+              <span>pranto113015@gmail.com</span>
+            </li>
           </ul>
         </div>
       </div>
 
       <div>
         <hr />
-        <p className="py-5 text-sm text-center">Copyright 2024-2025 @ forever.com - All Right Reserved Design by <a href="https://www.linkedin.com/in/pranto-kumar-113015/">Pranto Kumar</a></p>
+        <p className="py-5 text-sm text-center text-gray-500">
+          © {new Date().getFullYear()} Forever. All rights reserved.
+          <span className="ml-1">
+            Designed & Developed by{" "}
+            <a
+              href="https://www.linkedin.com/in/pranto-kumar-113015/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium hover:underline"
+            >
+              Pranto Kumar
+            </a>
+          </span>
+        </p>
       </div>
     </div>
   );
