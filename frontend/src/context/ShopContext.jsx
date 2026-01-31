@@ -45,20 +45,20 @@ const ShopContextProvider = (props) => {
       cartData[itemId][size] = 1;
     }
     setCartItems(cartData);
+    toast.success("Product added to cart successfully");
 
     if (token) {
       try {
         await axios.post(
           backendUrl + "/api/cart/add",
           { itemId, size },
-          { headers: { token } }
+          { headers: { token } },
         );
       } catch (error) {
         console.log(error);
         toast.error(error.message);
       }
     }
-
   };
 
   // add to card counter
@@ -78,9 +78,6 @@ const ShopContextProvider = (props) => {
     return totalCount;
   };
 
-
-
-
   // update quantity of the cart item
   const updateQuantity = async (itemId, size, quantity) => {
     let cartData = structuredClone(cartItems);
@@ -91,46 +88,36 @@ const ShopContextProvider = (props) => {
 
     if (token) {
       try {
-          await axios.post(backendUrl + '/api/cart/update' , { itemId, size, quantity},{ headers: { token }});
+        await axios.post(
+          backendUrl + "/api/cart/update",
+          { itemId, size, quantity },
+          { headers: { token } },
+        );
       } catch (error) {
         console.log(error);
         toast.error(error.message);
       }
     }
-};
+  };
 
-  
-
-
-
-
-
-const getCartAmount = () => {
-  let totalAmount = 0;
-  for (const itemId in cartItems) {
-    const itemInfo = products.find((product) => product._id === itemId);
-    if (!itemInfo) continue; // ⚠️ যদি itemInfo না পাওয়া যায়, তাহলে skip
-    for (const size in cartItems[itemId]) {
-      try {
-        const quantity = cartItems[itemId][size];
-        if (quantity > 0) {
-          totalAmount += itemInfo.price * quantity;
+  const getCartAmount = () => {
+    let totalAmount = 0;
+    for (const itemId in cartItems) {
+      const itemInfo = products.find((product) => product._id === itemId);
+      if (!itemInfo) continue;
+      for (const size in cartItems[itemId]) {
+        try {
+          const quantity = cartItems[itemId][size];
+          if (quantity > 0) {
+            totalAmount += itemInfo.price * quantity;
+          }
+        } catch (error) {
+          console.log(error);
         }
-      } catch (error) {
-        console.log(error);
       }
     }
-  }
-  return totalAmount;
-};
-
-
-
-
-
-
-
-
+    return totalAmount;
+  };
 
   // Fetch products data from the backend
   const getProductsData = async () => {
@@ -148,18 +135,13 @@ const getCartAmount = () => {
     }
   };
 
-
-
-
-
-  
   // Fetch user cart data from the backend
   const getUserCart = async (token) => {
     try {
       const response = await axios.post(
         backendUrl + "/api/cart/get",
         {},
-        { headers: { token } }
+        { headers: { token } },
       );
       if (response.data.success) {
         setCartItems(response.data.cartData);
@@ -170,8 +152,6 @@ const getCartAmount = () => {
     }
   };
 
-
-  
   useEffect(() => {
     getProductsData();
   }, []);
@@ -203,7 +183,6 @@ const getCartAmount = () => {
     token,
   };
 
-  
   ShopContextProvider.propTypes = {
     children: PropTypes.node.isRequired, // Validates that 'children' is a React node and required
   };
