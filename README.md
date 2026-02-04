@@ -46,10 +46,10 @@ This is a complete **Full Stack E-commerce Web Application** built using the MER
 
 ## 🔑 Credentials for payment (for testing)
 
-| Role     | Email          | Card No             | Date  | CVC | Phone      |
-| -------- | -------------- | ------------------- | ----- | --- | ---------- |
-| Stripe   | demo@gmail.com | 4242 4242 4242 4242 | 12/34 | 567 |            |
-| Razorpay | demo@gmail.com | 4386 2894 0766 0153 | 15/35 | 234 | 9876543210 |
+| Role     | Email          | Card No             | Date  | CVC | Phone      | OTP   |
+| -------- | -------------- | ------------------- | ----- | --- | ---------- | ----- |
+| Stripe   | demo@gmail.com | 4242 4242 4242 4242 | 12/34 | 567 |            |       |
+| Razorpay | demo@gmail.com | 4386 2894 0766 0153 | 15/35 | 234 | 9876543210 | 12345 |
 
 ## ⚙️ Local Installation & Setup Guide (Windows)
 
