@@ -3,7 +3,6 @@ import { Link, NavLink } from "react-router-dom";
 import { useContext, useState } from "react";
 import { ShopContext } from "../context/ShopContext";
 
-
 function Navbar() {
   const [visible, setVisible] = useState(false);
 
@@ -22,10 +21,6 @@ function Navbar() {
     setToken("");
     // toast.success("Logout successful");
     setCartItems({});
-    
-    
-
-
   };
 
   return (
@@ -52,12 +47,16 @@ function Navbar() {
           <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
         </NavLink>
 
-
-        <NavLink target="_blank" to="https://forever-admin-omega-liard.vercel.app/" className="flex flex-col items-center gap-1 ">
-          <a  className="border px-5 text-sm py-1 rounded-full -mt-1">Admin Panel</a>
+        <NavLink
+          target="_blank"
+          to="https://forever-admin-omega-liard.vercel.app/"
+          className="flex flex-col items-center gap-1 "
+        >
+          <span className="border px-5 text-sm py-1 rounded-full -mt-1">
+            Admin Panel
+          </span>
           <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
         </NavLink>
-
       </ul>
 
       <div className="flex items-center gap-6">
@@ -70,28 +69,30 @@ function Navbar() {
 
         <div className="group relative">
           <img
-            onClick={() => token ? null : navigate("/login")}
+            onClick={() => (token ? null : navigate("/login"))}
             src={assets.profile_icon}
             className="w-5 cursor-pointer"
             alt="pofileIcon"
           />
 
           {/* dropdown menu for profile icon */}
-          {token && 
+          {token && (
             <div className="group-hover:block hidden absolute dropdown-menu right-0 pt-4">
               <div className="flex flex-col gap-2 w-36 py-3 px-5 bg-slate-100 text-gray-500 rounded">
                 <p className="cursor-pointer hover:text-black">My Profile</p>
-                <p onClick={() => navigate("/orders")} className="cursor-pointer hover:text-black">Orders</p>
+                <p
+                  onClick={() => navigate("/orders")}
+                  className="cursor-pointer hover:text-black"
+                >
+                  Orders
+                </p>
                 <p onClick={logout} className="cursor-pointer hover:text-black">
                   Logout
                 </p>
               </div>
             </div>
-          }
-
+          )}
         </div>
-
-
 
         {/* card icon start */}
         <Link to="/cart" className="relative">
@@ -158,7 +159,7 @@ function Navbar() {
           >
             Contact
           </NavLink>
-            <NavLink
+          <NavLink
             onClick={() => setVisible(false)}
             className="py-2 pl-6 border"
             to="https://forever-admin-omega-liard.vercel.app/"
