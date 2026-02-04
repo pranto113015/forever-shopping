@@ -6,7 +6,6 @@ import { ShopContext } from "../context/ShopContext";
 import { toast } from "react-toastify";
 import axios from "axios";
 
-
 const PlaceOrder = () => {
   const [method, setMethod] = useState("cod");
   const {
@@ -39,38 +38,36 @@ const PlaceOrder = () => {
     setFormData((data) => ({ ...data, [name]: value }));
   };
 
-
-
   const initPay = (order) => {
     const options = {
-      key: import.meta.env.VITE_RAZORPAY_KEY_ID, 
+      key: import.meta.env.VITE_RAZORPAY_KEY_ID,
       amount: order.amount,
-      name: 'Order Payment', 
-      desscription: 'Order Payment',
-      order_id: order.id, 
+      name: "Order Payment",
+      desscription: "Order Payment",
+      order_id: order.id,
       receipt: order.receipt,
       handler: async (response) => {
-        console.log(response)
+        console.log(response);
         try {
-            const {data} = await axios.post(backendUrl + '/api/order/verifyRazorpay', response, {headers: {token}})
-            if(data.success){
-              navigate('/orders');
-              setCartItems({});
-            }
-        } catch (error){
+          const { data } = await axios.post(
+            backendUrl + "/api/order/verifyRazorpay",
+            response,
+            { headers: { token } },
+          );
+          if (data.success) {
+            navigate("/orders");
+            setCartItems({});
+          }
+        } catch (error) {
           console.log(error);
-          toast.error(error)
+          toast.error(error);
         }
-      }
-    }
-
+      },
+    };
 
     const rzp = new window.Razorpay(options);
     rzp.open();
-  }
-
-
-
+  };
 
   const onSubmitHandler = async (event) => {
     event.preventDefault();
@@ -82,7 +79,7 @@ const PlaceOrder = () => {
         for (const item in cartItems[items]) {
           if (cartItems[items][item] > 0) {
             const itemInfo = structuredClone(
-              products.find((product) => product._id === items)
+              products.find((product) => product._id === items),
             );
             if (itemInfo) {
               itemInfo.size = item;
@@ -105,9 +102,8 @@ const PlaceOrder = () => {
             const response = await axios.post(
               `${backendUrl}/api/order/place`,
               orderData,
-              { headers: { token } }
+              { headers: { token } },
             );
-       
 
             if (response.data.success) {
               setCartItems({});
@@ -119,31 +115,37 @@ const PlaceOrder = () => {
           } catch (error) {
             console.error("Order API error:", error);
             toast.error(
-              error.response?.data?.message || "Something went wrong."
+              error.response?.data?.message || "Something went wrong.",
             );
           }
           break;
         case "stripe": {
-          const responseStripe = await axios.post(backendUrl + '/api/order/stripe', orderData, {headers: {token}})
-          if(responseStripe.data.success){
-            const {session_url} = responseStripe.data
+          const responseStripe = await axios.post(
+            backendUrl + "/api/order/stripe",
+            orderData,
+            { headers: { token } },
+          );
+          if (responseStripe.data.success) {
+            const { session_url } = responseStripe.data;
             window.location.replace(session_url);
           } else {
             toast.error(responseStripe.data.message);
           }
           break;
-          
         }
 
         case "razorpay": {
-          const responseRazorpay = await axios.post(backendUrl + '/api/order/razorpay', orderData, {headers: {token}})
-          if(responseRazorpay.data.success){
+          const responseRazorpay = await axios.post(
+            backendUrl + "/api/order/razorpay",
+            orderData,
+            { headers: { token } },
+          );
+          if (responseRazorpay.data.success) {
             initPay(responseRazorpay.data.order);
           }
-          
+
           break;
         }
-
 
         default:
           toast.warn("Invalid payment method.");
