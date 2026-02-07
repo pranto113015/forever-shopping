@@ -5,8 +5,16 @@ import PropTypes from "prop-types";
 
 const ProducItem = ({ id, image, name, price }) => {
   const { currency } = useContext(ShopContext);
+  const handleClick = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
+
   return (
-    <Link className="text-gray-700 cursor-pointer" to={`/product/${id}`}>
+    <Link
+      className="text-gray-700 cursor-pointer"
+      to={`/product/${id}`}
+      onClick={handleClick}
+    >
       <div className="overflow-hidden">
         <img
           className="hover:scale-110 transition ease-out"
@@ -31,4 +39,3 @@ ProducItem.propTypes = {
 };
 
 export default ProducItem;
-
